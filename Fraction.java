@@ -135,6 +135,10 @@ public class Fraction {
         int numGCD = gcd(this.numerator, this.denominator);
         this.numerator /= numGCD;
         this.denominator /= numGCD;
+        if(this.denominator < 0) {
+            this.numerator *= -1;
+            this.denominator *= -1;
+        }
     }
 
     /*
